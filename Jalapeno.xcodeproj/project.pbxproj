@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91571E57F9D400989788 /* DeviceTableViewController.m */; };
 		4C7F33931E57D888006E81C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33921E57D888006E81C9 /* main.m */; };
 		4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33951E57D888006E81C9 /* AppDelegate.m */; };
-		4C7F33991E57D888006E81C9 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33981E57D888006E81C9 /* DeviceViewController.m */; };
 		4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339A1E57D888006E81C9 /* Main.storyboard */; };
 		4C7F339E1E57D888006E81C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339D1E57D888006E81C9 /* Assets.xcassets */; };
 		4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339F1E57D888006E81C9 /* LaunchScreen.storyboard */; };
@@ -17,15 +17,17 @@
 		4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */; };
 		4CAFFCD11E57E20000682871 /* datadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD01E57E20000682871 /* datadummy.json */; };
 		4CAFFCD31E57EC7A00682871 /* historicaldatadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */; };
+		57A03235F5E9819F81ED3029 /* Pods_Jalapeno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20E88D14A442359547BF70A8 /* Pods-Jalapeno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jalapeno.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno.release.xcconfig"; sourceTree = "<group>"; };
+		4C6F91561E57F9D400989788 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
+		4C6F91571E57F9D400989788 /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
 		4C7F338E1E57D888006E81C9 /* Jalapeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jalapeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C7F33951E57D888006E81C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C7F33971E57D888006E81C9 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
-		4C7F33981E57D888006E81C9 /* DeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
 		4C7F339B1E57D888006E81C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C7F339D1E57D888006E81C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C7F33A01E57D888006E81C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		4CAFFCD01E57E20000682871 /* datadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datadummy.json; sourceTree = "<group>"; };
 		4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historicaldatadummy.json; sourceTree = "<group>"; };
+		735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jalapeno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jalapeno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A03235F5E9819F81ED3029 /* Pods_Jalapeno.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				4C7F33901E57D888006E81C9 /* Jalapeno */,
 				4C7F338F1E57D888006E81C9 /* Products */,
+				98D117576B48E26D2CBA7264 /* Pods */,
+				5FACBC45359DD1EC19BA269D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +75,10 @@
 		4C7F33901E57D888006E81C9 /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
-				4C7F33971E57D888006E81C9 /* DeviceViewController.h */,
-				4C7F33981E57D888006E81C9 /* DeviceViewController.m */,
 				4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */,
 				4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */,
+				4C6F91561E57F9D400989788 /* DeviceTableViewController.h */,
+				4C6F91571E57F9D400989788 /* DeviceTableViewController.m */,
 				4CAFFCCA1E57E09500682871 /* LoginViewController.h */,
 				4CAFFCCB1E57E09500682871 /* LoginViewController.m */,
 				4C7F339A1E57D888006E81C9 /* Main.storyboard */,
@@ -95,6 +102,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5FACBC45359DD1EC19BA269D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98D117576B48E26D2CBA7264 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */,
+				20E88D14A442359547BF70A8 /* Pods-Jalapeno.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,9 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C7F33A51E57D888006E81C9 /* Build configuration list for PBXNativeTarget "Jalapeno" */;
 			buildPhases = (
+				0239D3A8FB437BC6DB52576B /* [CP] Check Pods Manifest.lock */,
 				4C7F338A1E57D887006E81C9 /* Sources */,
 				4C7F338B1E57D887006E81C9 /* Frameworks */,
 				4C7F338C1E57D887006E81C9 /* Resources */,
+				2FA1A829B6F8FC009E96A23D /* [CP] Embed Pods Frameworks */,
+				CA4189B006F3C2C12F013598 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +154,7 @@
 					4C7F338D1E57D887006E81C9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2GDREL3UW9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,15 +192,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0239D3A8FB437BC6DB52576B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FA1A829B6F8FC009E96A23D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4189B006F3C2C12F013598 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C7F338A1E57D887006E81C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4CAFFCCC1E57E09500682871 /* LoginViewController.m in Sources */,
-				4C7F33991E57D888006E81C9 /* DeviceViewController.m in Sources */,
 				4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */,
 				4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */,
+				4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */,
 				4C7F33931E57D888006E81C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +367,9 @@
 		};
 		4C7F33A61E57D888006E81C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
@@ -299,12 +377,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4C7F33A71E57D888006E81C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E88D14A442359547BF70A8 /* Pods-Jalapeno.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
@@ -312,6 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
