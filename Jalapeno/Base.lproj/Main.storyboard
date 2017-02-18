@@ -116,6 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceTableCell" textLabel="INA-Bh-9t6" detailTextLabel="3Ed-ML-bVJ" style="IBUITableViewCellStyleSubtitle" id="58H-Gk-MMk">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -140,9 +141,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="wrg-9r-dR7"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

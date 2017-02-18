@@ -10,8 +10,13 @@
 
 @implementation DeviceTableViewCell
 
++ (CGFloat)cellHeight{
+    return 80;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     // Initialization code
 }
 

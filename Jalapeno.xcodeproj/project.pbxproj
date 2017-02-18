@@ -10,6 +10,7 @@
 		4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91571E57F9D400989788 /* DeviceTableViewController.m */; };
 		4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */; };
 		4C6F91621E5808D400989788 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */; };
+		4C6F91661E58246000989788 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91651E58246000989788 /* Constants.m */; };
 		4C7F33931E57D888006E81C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33921E57D888006E81C9 /* main.m */; };
 		4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33951E57D888006E81C9 /* AppDelegate.m */; };
 		4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339A1E57D888006E81C9 /* Main.storyboard */; };
@@ -29,6 +30,8 @@
 		4C6F915E1E5808D400989788 /* DeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewCell.h; sourceTree = "<group>"; };
 		4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
 		4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		4C6F91641E58246000989788 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4C6F91651E58246000989788 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4C7F338E1E57D888006E81C9 /* Jalapeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jalapeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */,
 				4C7F33941E57D888006E81C9 /* AppDelegate.h */,
 				4C7F33951E57D888006E81C9 /* AppDelegate.m */,
+				4C6F91641E58246000989788 /* Constants.h */,
+				4C6F91651E58246000989788 /* Constants.m */,
 				4C7F33921E57D888006E81C9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -267,6 +272,7 @@
 				4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */,
 				4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */,
 				4C7F33931E57D888006E81C9 /* main.m in Sources */,
+				4C6F91661E58246000989788 /* Constants.m in Sources */,
 				4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

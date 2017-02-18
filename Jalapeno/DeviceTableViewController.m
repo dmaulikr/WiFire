@@ -8,6 +8,8 @@
 
 #import "DeviceTableViewController.h"
 #import "DeviceDetailViewController.h"
+#import "DeviceTableViewCell.h"
+#import "Constants.h"
 
 @interface DeviceTableViewController ()
 
@@ -23,6 +25,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeviceTableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,18 +40,35 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"deviceTableCell" forIndexPath:indexPath];
-    cell.textLabel.text = @"West Wing - 14th Hall";
-    cell.detailTextLabel.text = @"Status: All Sensors Normal";
+    DeviceTableViewCell *cell = (DeviceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeviceTableViewCell"];
+    if(indexPath.row == 0){
+        cell.deviceNameLabel.text = @"West Wing A7 - 14th Hall";
+        cell.statusLabel.text = @"Safe:";
+        cell.statusMessageLabel.text = @"All sensor readings normal.";
+        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.180 green:0.698 blue:0.529 alpha:1.00];
+    } else if (indexPath.row == 1){
+        cell.deviceNameLabel.text = @"East Wing B6 - 2nd Hall";
+        cell.statusLabel.text = @"Warning:";
+        cell.statusMessageLabel.text = @"Elevated temperature detected.";
+        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.96 green:0.63 blue:0.17 alpha:1.00];
+    } else{
+        cell.deviceNameLabel.text = @"1st Floor Utility - 4th Hall";
+        cell.statusLabel.text = @"Danger:";
+        cell.statusMessageLabel.text = @"Gas leak detected!";
+        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.87 green:0.27 blue:0.18 alpha:1.00];
+    }
+    
     // Configure the cell...
     
     return cell;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [DeviceTableViewCell cellHeight];
+}
 
 
 /*
