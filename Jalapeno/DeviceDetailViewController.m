@@ -7,6 +7,7 @@
 //
 
 #import "DeviceDetailViewController.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface DeviceDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
@@ -21,6 +22,14 @@
     
     
     self.title = @"West Wing - 14th Hall";
+    NSLog(@"Reached here");
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [manager GET:@"http://172.30.0.200:5000/" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
     
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"datadummy" ofType:@"json"];

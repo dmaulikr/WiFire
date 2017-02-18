@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91571E57F9D400989788 /* DeviceTableViewController.m */; };
+		4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */; };
+		4C6F91621E5808D400989788 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */; };
 		4C7F33931E57D888006E81C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33921E57D888006E81C9 /* main.m */; };
 		4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33951E57D888006E81C9 /* AppDelegate.m */; };
 		4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339A1E57D888006E81C9 /* Main.storyboard */; };
@@ -24,6 +26,9 @@
 		20E88D14A442359547BF70A8 /* Pods-Jalapeno.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jalapeno.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno.release.xcconfig"; sourceTree = "<group>"; };
 		4C6F91561E57F9D400989788 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
 		4C6F91571E57F9D400989788 /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
+		4C6F915E1E5808D400989788 /* DeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewCell.h; sourceTree = "<group>"; };
+		4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
+		4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
 		4C7F338E1E57D888006E81C9 /* Jalapeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jalapeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C6F91631E5808E300989788 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				4C6F915E1E5808D400989788 /* DeviceTableViewCell.h */,
+				4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */,
+				4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
 		4C7F33851E57D887006E81C9 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +90,7 @@
 		4C7F33901E57D888006E81C9 /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
+				4C6F91631E5808E300989788 /* CustomCells */,
 				4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */,
 				4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */,
 				4C6F91561E57F9D400989788 /* DeviceTableViewController.h */,
@@ -183,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CAFFCD11E57E20000682871 /* datadummy.json in Resources */,
+				4C6F91621E5808D400989788 /* DeviceTableViewCell.xib in Resources */,
 				4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */,
 				4C7F339E1E57D888006E81C9 /* Assets.xcassets in Resources */,
 				4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */,
@@ -250,6 +267,7 @@
 				4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */,
 				4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */,
 				4C7F33931E57D888006E81C9 /* main.m in Sources */,
+				4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
