@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Jalapeno-Swift.h"
+
+@import ChameleonFramework;
 
 @interface AppDelegate ()
 
@@ -19,8 +22,11 @@
     // Override point for customization after application launch.
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                                             NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:19.0f],
+                                                            NSForegroundColorAttributeName : [UIColor whiteColor]
                                                             }];
     self.storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor flatNavyBlueColorDark]];
+
     return YES;
 }
 
@@ -50,6 +56,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 
 @end

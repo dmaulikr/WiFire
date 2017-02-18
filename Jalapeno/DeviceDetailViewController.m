@@ -26,14 +26,12 @@
     [super viewDidLoad];
     [self setupPieChartView:self.circleChart];
     self.circleChart.delegate = self;
+    [self.circleChart.legend setEnabled:NO];
     [self.circleChart animateWithXAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
 
     NSMutableArray *colors = [[NSMutableArray alloc]init];
     [colors addObject:[UIColor flatMintColor]];
-    [colors addObject:[UIColor flatBlueColor]];
-    [colors addObject:[UIColor flatPlumColor]];
-    [colors addObject:[UIColor flatGrayColor]];
-
+ 
     NSMutableArray *values = [[NSMutableArray alloc] init];
     for (int i = 0; i < 4; i++)
     {
@@ -42,15 +40,13 @@
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:values label:@"Secure"];
     dataSet.sliceSpace = 2.0;
     dataSet.colors = colors;
+    dataSet.valueLinePart1OffsetPercentage = 0.8;
+    dataSet.valueLinePart1Length = 0.2;
+    dataSet.valueLinePart2Length = 0.4;
+        //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
+    dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
     PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
-    NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
-    pFormatter.numberStyle = NSNumberFormatterPercentStyle;
-    pFormatter.maximumFractionDigits = 1;
-    pFormatter.multiplier = @1.f;
-    pFormatter.percentSymbol = @" %";
-    [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
-    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
-    [data setValueTextColor:UIColor.whiteColor];
+    
     
     self.circleChart.data = data;
     [self.circleChart highlightValues:nil];
@@ -101,11 +97,9 @@
 {
     chartView.usePercentValuesEnabled = YES;
     chartView.drawSlicesUnderHoleEnabled = NO;
-    chartView.holeRadiusPercent = 0.58;
-    chartView.transparentCircleRadiusPercent = 0.61;
+    chartView.holeRadiusPercent = 0.68;
+    chartView.transparentCircleRadiusPercent = 0.71;
     chartView.chartDescription.enabled = NO;
-    [chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
-    
     chartView.drawCenterTextEnabled = YES;
     
     NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -114,13 +108,15 @@
     
     NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Secure"];
     [centerText setAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:13.f],
-                                NSParagraphStyleAttributeName: paragraphStyle
+                                NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:24.f],
+                                NSParagraphStyleAttributeName: paragraphStyle,
+                                NSForegroundColorAttributeName : [UIColor whiteColor]
                                 } range:NSMakeRange(0, centerText.length)];
     
     chartView.centerAttributedText = centerText;
     
     chartView.drawHoleEnabled = YES;
+    chartView.holeColor = nil;
     chartView.rotationAngle = 0.0;
     chartView.rotationEnabled = YES;
     chartView.highlightPerTapEnabled = YES;

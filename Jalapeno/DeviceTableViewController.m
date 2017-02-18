@@ -11,6 +11,9 @@
 #import "DeviceTableViewCell.h"
 #import "Constants.h"
 #import "AppDelegate.h"
+#import "Jalapeno-Swift.h"
+
+@import ChameleonFramework;
 
 @interface DeviceTableViewController ()
 
@@ -21,21 +24,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setNeedsStatusBarAppearanceUpdate];
     self.title = @"Sensor Groups";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
     [self.tableView registerNib:[UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeviceTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    self.tableView.backgroundColor = [UIColor flatNavyBlueColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+}
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -49,21 +55,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DeviceTableViewCell *cell = (DeviceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeviceTableViewCell"];
+    cell.backgroundColor = [UIColor flatNavyBlueColor];
     if(indexPath.row == 0){
         cell.deviceNameLabel.text = @"West Wing A7 - 14th Hall";
         cell.statusLabel.text = safeStatus;
+        cell.statusLabel.textColor = [UIColor flatMintColor];
         cell.statusMessageLabel.text = @"All sensor readings normal.";
-        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.180 green:0.698 blue:0.529 alpha:1.00];
+        cell.statusBarView.backgroundColor = [UIColor flatMintColor];
     } else if (indexPath.row == 1){
         cell.deviceNameLabel.text = @"East Wing B6 - 2nd Hall";
         cell.statusLabel.text = warningStatus;
+        cell.statusLabel.textColor = [UIColor flatYellowColorDark];
         cell.statusMessageLabel.text = @"Elevated temperature detected.";
-        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.96 green:0.63 blue:0.17 alpha:1.00];
+        cell.statusBarView.backgroundColor = [UIColor flatYellowColorDark];
     } else{
         cell.deviceNameLabel.text = @"1st Floor Utility - 4th Hall";
         cell.statusLabel.text = dangerStatus;
+        cell.statusLabel.textColor = [UIColor flatWatermelonColor];
         cell.statusMessageLabel.text = @"Gas leak detected!";
-        cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.87 green:0.27 blue:0.18 alpha:1.00];
+        cell.statusBarView.backgroundColor = [UIColor flatWatermelonColor];
     }
     
     // Configure the cell...

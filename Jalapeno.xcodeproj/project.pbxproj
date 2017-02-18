@@ -47,6 +47,7 @@
 		4CEBC6E01E5838DE00027343 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		4CEBC6E21E5884D300027343 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4CEBC6E31E5884D300027343 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4CEBC6E61E58A1C500027343 /* Jalapeno.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jalapeno.entitlements; sourceTree = "<group>"; };
 		735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jalapeno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jalapeno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +95,7 @@
 		4C7F33901E57D888006E81C9 /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
+				4CEBC6E61E58A1C500027343 /* Jalapeno.entitlements */,
 				4C6F91631E5808E300989788 /* CustomCells */,
 				4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */,
 				4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */,
@@ -179,6 +181,11 @@
 						DevelopmentTeam = 2GDREL3UW9;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -404,6 +411,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jalapeno/Jalapeno.entitlements;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				ENABLE_BITCODE = YES;
@@ -425,6 +433,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Jalapeno/Jalapeno.entitlements;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				ENABLE_BITCODE = YES;
