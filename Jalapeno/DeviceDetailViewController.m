@@ -26,31 +26,24 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [manager GET:@"http://130.245.183.173:80/" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"%@", responseObject);
+        self.temperatureLabel.text = [NSString stringWithFormat:@"Temperature:%@",[[responseObject objectForKey:@"temp"] stringValue]];
+        
+        if([[responseObject objectForKey:@"flame"] boolValue]){
+            self.flameLabel.text = @"Flame: Warning.  Flame Danger";
+        } else{
+            self.flameLabel.text = @"Flame: Safe!";
+        }
+        if([[responseObject objectForKey:@"gas"] boolValue]){
+            self.gasLabel.text = @"Gas: Warning.  Gas Danger!";
+        } else{
+            self.gasLabel.text = @"Gas: Safe!";
+        }
+
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"datadummy" ofType:@"json"];
-    NSString *myJSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
-        // Parse the string into JSON
-    NSError *error = nil;
-    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:[myJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    
-    self.temperatureLabel.text = [NSString stringWithFormat:@"Temperature:%@",[[jsonObject objectForKey:@"temp"] stringValue]];
-    
-    if([[jsonObject objectForKey:@"flame"] boolValue]){
-        self.flameLabel.text = @"Flame: Warning.  Flame Danger";
-    } else{
-        self.flameLabel.text = @"Flame: Safe!";
-    }
-    if([[jsonObject objectForKey:@"gas"] boolValue]){
-        self.gasLabel.text = @"Gas: Warning.  Gas Danger!";
-    } else{
-        self.gasLabel.text = @"Gas: Safe!";
-    }
-
     // Do any additional setup after loading the view.
 }
 

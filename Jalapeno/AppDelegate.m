@@ -20,6 +20,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                                             NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:19.0f],
                                                             }];
+    self.storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     return YES;
 }
 
