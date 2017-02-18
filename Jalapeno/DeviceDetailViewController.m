@@ -42,7 +42,15 @@
     
 }
 
-
+- (void)setupChartView{
+    self.lineChart.delegate = self;
+    self.lineChart.chartDescription.enabled = NO;
+    self.lineChart.drawGridBackgroundEnabled = NO;
+    self.lineChart.drawBordersEnabled = NO;
+    self.lineChart.dragEnabled = YES;
+    [self.lineChart setScaleEnabled:YES];
+    self.lineChart.pinchZoomEnabled = NO;
+}
 
 - (void)appendCurrentResponseData:(NSTimer *)timer{
     
@@ -75,8 +83,10 @@
     set.axisDependency = AxisDependencyLeft;
 }
 
+
 - (void)updateChart{
-    
+    LineChartData *data = [[LineChartData alloc]initWithDataSet:self.lineChartDataLive];
+    self.lineChart.data = data;
 }
 
 
