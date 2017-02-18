@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DeviceDetailViewController.h
 //  Jalapeno
 //
 //  Created by Michael Lee on 2/17/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DeviceDetailViewController : UIViewController
 
 @end
-

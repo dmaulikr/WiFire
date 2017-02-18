@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		4C7F33931E57D888006E81C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33921E57D888006E81C9 /* main.m */; };
 		4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33951E57D888006E81C9 /* AppDelegate.m */; };
-		4C7F33991E57D888006E81C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33981E57D888006E81C9 /* ViewController.m */; };
+		4C7F33991E57D888006E81C9 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33981E57D888006E81C9 /* DeviceViewController.m */; };
 		4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339A1E57D888006E81C9 /* Main.storyboard */; };
 		4C7F339E1E57D888006E81C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339D1E57D888006E81C9 /* Assets.xcassets */; };
 		4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339F1E57D888006E81C9 /* LaunchScreen.storyboard */; };
+		4CAFFCCC1E57E09500682871 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAFFCCB1E57E09500682871 /* LoginViewController.m */; };
+		4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */; };
+		4CAFFCD11E57E20000682871 /* datadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD01E57E20000682871 /* datadummy.json */; };
+		4CAFFCD31E57EC7A00682871 /* historicaldatadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,18 @@
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C7F33951E57D888006E81C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C7F33971E57D888006E81C9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C7F33981E57D888006E81C9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C7F33971E57D888006E81C9 /* DeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
+		4C7F33981E57D888006E81C9 /* DeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
 		4C7F339B1E57D888006E81C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C7F339D1E57D888006E81C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C7F33A01E57D888006E81C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C7F33A21E57D888006E81C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CAFFCCA1E57E09500682871 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4CAFFCCB1E57E09500682871 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
+		4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
+		4CAFFCD01E57E20000682871 /* datadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datadummy.json; sourceTree = "<group>"; };
+		4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historicaldatadummy.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +68,12 @@
 		4C7F33901E57D888006E81C9 /* Jalapeno */ = {
 			isa = PBXGroup;
 			children = (
-				4C7F33941E57D888006E81C9 /* AppDelegate.h */,
-				4C7F33951E57D888006E81C9 /* AppDelegate.m */,
-				4C7F33971E57D888006E81C9 /* ViewController.h */,
-				4C7F33981E57D888006E81C9 /* ViewController.m */,
+				4C7F33971E57D888006E81C9 /* DeviceViewController.h */,
+				4C7F33981E57D888006E81C9 /* DeviceViewController.m */,
+				4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */,
+				4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */,
+				4CAFFCCA1E57E09500682871 /* LoginViewController.h */,
+				4CAFFCCB1E57E09500682871 /* LoginViewController.m */,
 				4C7F339A1E57D888006E81C9 /* Main.storyboard */,
 				4C7F339D1E57D888006E81C9 /* Assets.xcassets */,
 				4C7F339F1E57D888006E81C9 /* LaunchScreen.storyboard */,
@@ -74,6 +86,10 @@
 		4C7F33911E57D888006E81C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4CAFFCD01E57E20000682871 /* datadummy.json */,
+				4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */,
+				4C7F33941E57D888006E81C9 /* AppDelegate.h */,
+				4C7F33951E57D888006E81C9 /* AppDelegate.m */,
 				4C7F33921E57D888006E81C9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -110,6 +126,7 @@
 				TargetAttributes = {
 					4C7F338D1E57D887006E81C9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2GDREL3UW9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,9 +154,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CAFFCD11E57E20000682871 /* datadummy.json in Resources */,
 				4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */,
 				4C7F339E1E57D888006E81C9 /* Assets.xcassets in Resources */,
 				4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */,
+				4CAFFCD31E57EC7A00682871 /* historicaldatadummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C7F33991E57D888006E81C9 /* ViewController.m in Sources */,
+				4CAFFCCC1E57E09500682871 /* LoginViewController.m in Sources */,
+				4C7F33991E57D888006E81C9 /* DeviceViewController.m in Sources */,
+				4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */,
 				4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */,
 				4C7F33931E57D888006E81C9 /* main.m in Sources */,
 			);
@@ -272,7 +293,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,7 +306,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2GDREL3UW9;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +334,7 @@
 				4C7F33A71E57D888006E81C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

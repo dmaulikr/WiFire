@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  DeviceViewController.m
 //  Jalapeno
 //
 //  Created by Michael Lee on 2/17/17.
 //  Copyright © 2017 Jalapeno. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DeviceViewController.h"
 
-@interface ViewController ()
+@interface DeviceViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DeviceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
