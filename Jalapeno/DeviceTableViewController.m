@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation DeviceTableViewController
 
 - (void)viewDidLoad {
@@ -50,17 +51,17 @@
     DeviceTableViewCell *cell = (DeviceTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DeviceTableViewCell"];
     if(indexPath.row == 0){
         cell.deviceNameLabel.text = @"West Wing A7 - 14th Hall";
-        cell.statusLabel.text = @"Safe:";
+        cell.statusLabel.text = safeStatus;
         cell.statusMessageLabel.text = @"All sensor readings normal.";
         cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.180 green:0.698 blue:0.529 alpha:1.00];
     } else if (indexPath.row == 1){
         cell.deviceNameLabel.text = @"East Wing B6 - 2nd Hall";
-        cell.statusLabel.text = @"Warning:";
+        cell.statusLabel.text = warningStatus;
         cell.statusMessageLabel.text = @"Elevated temperature detected.";
         cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.96 green:0.63 blue:0.17 alpha:1.00];
     } else{
         cell.deviceNameLabel.text = @"1st Floor Utility - 4th Hall";
-        cell.statusLabel.text = @"Danger:";
+        cell.statusLabel.text = dangerStatus;
         cell.statusMessageLabel.text = @"Gas leak detected!";
         cell.statusBarView.backgroundColor = [UIColor colorWithRed:0.87 green:0.27 blue:0.18 alpha:1.00];
     }

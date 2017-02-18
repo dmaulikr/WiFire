@@ -14,13 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
 
 DEPENDENCIES:
   - AFNetworking
+  - ChameleonFramework
+  - Charts
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
 
-PODFILE CHECKSUM: 1458897f7f6faeb897427a5ebeffad833879edee
+PODFILE CHECKSUM: a29a2079678d4d1215c6f9704733b950a862fd6e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

@@ -8,20 +8,54 @@
 
 #import "DeviceDetailViewController.h"
 #import <AFNetworking/AFNetworking.h>
+#import "Jalapeno-Swift.h"
+#import <ChameleonFramework/Chameleon.h>
 
-@interface DeviceDetailViewController ()
+@import Charts;
+
+@interface DeviceDetailViewController () <ChartViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *flameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gasLabel;
+@property (strong, nonatomic) IBOutlet PieChartView *circleChart;
 @end
 
 @implementation DeviceDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupPieChartView:self.circleChart];
+    self.circleChart.delegate = self;
+    [self.circleChart animateWithXAxisDuration:1.4 easingOption:ChartEasingOptionEaseOutBack];
+
+    NSMutableArray *colors = [[NSMutableArray alloc]init];
+    [colors addObject:[UIColor flatMintColor]];
+    [colors addObject:[UIColor flatBlueColor]];
+    [colors addObject:[UIColor flatPlumColor]];
+    [colors addObject:[UIColor flatGrayColor]];
+
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 4; i++)
+    {
+        [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"yo"]];
+    }
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:values label:@"Secure"];
+    dataSet.sliceSpace = 2.0;
+    dataSet.colors = colors;
+    PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+    NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
+    pFormatter.numberStyle = NSNumberFormatterPercentStyle;
+    pFormatter.maximumFractionDigits = 1;
+    pFormatter.multiplier = @1.f;
+    pFormatter.percentSymbol = @" %";
+    [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
+    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11.f]];
+    [data setValueTextColor:UIColor.whiteColor];
     
+    self.circleChart.data = data;
+    [self.circleChart highlightValues:nil];
+
     
-    self.title = @"West Wing - 14th Hall";
     NSLog(@"Reached here");
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
@@ -47,6 +81,8 @@
     // Do any additional setup after loading the view.
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -61,5 +97,35 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)setupPieChartView:(PieChartView *)chartView
+{
+    chartView.usePercentValuesEnabled = YES;
+    chartView.drawSlicesUnderHoleEnabled = NO;
+    chartView.holeRadiusPercent = 0.58;
+    chartView.transparentCircleRadiusPercent = 0.61;
+    chartView.chartDescription.enabled = NO;
+    [chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
+    
+    chartView.drawCenterTextEnabled = YES;
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Secure"];
+    [centerText setAttributes:@{
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:13.f],
+                                NSParagraphStyleAttributeName: paragraphStyle
+                                } range:NSMakeRange(0, centerText.length)];
+    
+    chartView.centerAttributedText = centerText;
+    
+    chartView.drawHoleEnabled = YES;
+    chartView.rotationAngle = 0.0;
+    chartView.rotationEnabled = YES;
+    chartView.highlightPerTapEnabled = YES;
+    
+}
+
 
 @end

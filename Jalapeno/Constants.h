@@ -7,12 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 @interface Constants : NSObject
-
-UIColor *successGreen();
-UIColor *warningYellow();
-UIColor *dangerRed();
-
+extern NSString *const safeStatus;
+extern NSString *const warningStatus;
+extern NSString *const dangerStatus;
 @end

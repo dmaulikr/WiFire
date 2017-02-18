@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,32 +21,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-ds-5Rw">
-                                <rect key="frame" x="69" y="142" width="277" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="XX°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-ds-5Rw">
+                                <rect key="frame" x="163" y="458" width="73" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-es-6gT">
+                                <rect key="frame" x="258" y="403" width="41" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="QVI-Jw-URU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gas?:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-es-6gT">
-                                <rect key="frame" x="69" y="261" width="269" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flame" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-v8-0oo">
+                                <rect key="frame" x="53" y="403" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="VSM-iQ-Whf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flame?:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-v8-0oo">
-                                <rect key="frame" x="69" y="201" width="269" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nt-5x-M4q">
+                                <rect key="frame" x="57" y="458" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXr-kV-XnD" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="71" y="20" width="233" height="214"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="Isr-ow-c5i"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5nt-5x-M4q" secondAttribute="bottom" constant="188" id="1V2-hV-inB"/>
+                            <constraint firstAttribute="bottom" secondItem="mXr-kV-XnD" secondAttribute="bottom" constant="433" id="4Y0-F2-Koo"/>
+                            <constraint firstItem="Os2-ds-5Rw" firstAttribute="leading" secondItem="5nt-5x-M4q" secondAttribute="trailing" constant="8" symbolic="YES" id="5lZ-Wk-vUx"/>
+                            <constraint firstItem="4HH-v8-0oo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="BmY-J3-m9d"/>
+                            <constraint firstItem="mXr-kV-XnD" firstAttribute="leading" secondItem="5nt-5x-M4q" secondAttribute="leading" id="R70-XN-Phn"/>
+                            <constraint firstItem="5nt-5x-M4q" firstAttribute="top" secondItem="Os2-ds-5Rw" secondAttribute="top" id="Z7y-HH-6yx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YhP-es-6gT" secondAttribute="trailing" constant="60" id="bsr-qj-GgN"/>
+                            <constraint firstItem="5nt-5x-M4q" firstAttribute="top" secondItem="4HH-v8-0oo" secondAttribute="bottom" constant="34" id="eHg-wc-wJA"/>
+                            <constraint firstItem="mXr-kV-XnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKh-2b-7KM"/>
+                            <constraint firstItem="mXr-kV-XnD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tRt-ZQ-QmT"/>
+                            <constraint firstItem="4HH-v8-0oo" firstAttribute="baseline" secondItem="YhP-es-6gT" secondAttribute="baseline" id="xTy-Qi-Myc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Iv-fD-7su"/>
                     <connections>
+                        <outlet property="circleChart" destination="mXr-kV-XnD" id="jyk-ux-fgl"/>
                         <outlet property="flameLabel" destination="4HH-v8-0oo" id="csi-n2-lH6"/>
                         <outlet property="gasLabel" destination="YhP-es-6gT" id="aLX-ys-H6T"/>
                         <outlet property="temperatureLabel" destination="Os2-ds-5Rw" id="gla-l7-izq"/>

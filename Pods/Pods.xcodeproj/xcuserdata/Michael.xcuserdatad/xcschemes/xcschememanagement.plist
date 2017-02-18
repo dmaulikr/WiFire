@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Jalapeno.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
+		<key>1A9046F027815119D7176D0E53D8B863</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52E9C17F7CA4CDD32951DEA0F342AA57</key>
+		<key>8A267660E1AD4832DE75665F2F87AEA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F307B842FF76B2DE6C55DB67C0885325</key>
 		<dict>
 			<key>primary</key>
 			<true/>

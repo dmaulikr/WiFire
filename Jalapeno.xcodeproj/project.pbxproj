@@ -10,7 +10,6 @@
 		4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91571E57F9D400989788 /* DeviceTableViewController.m */; };
 		4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */; };
 		4C6F91621E5808D400989788 /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */; };
-		4C6F91661E58246000989788 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F91651E58246000989788 /* Constants.m */; };
 		4C7F33931E57D888006E81C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33921E57D888006E81C9 /* main.m */; };
 		4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F33951E57D888006E81C9 /* AppDelegate.m */; };
 		4C7F339C1E57D888006E81C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339A1E57D888006E81C9 /* Main.storyboard */; };
@@ -18,8 +17,9 @@
 		4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7F339F1E57D888006E81C9 /* LaunchScreen.storyboard */; };
 		4CAFFCCC1E57E09500682871 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAFFCCB1E57E09500682871 /* LoginViewController.m */; };
 		4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */; };
-		4CAFFCD11E57E20000682871 /* datadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD01E57E20000682871 /* datadummy.json */; };
 		4CAFFCD31E57EC7A00682871 /* historicaldatadummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */; };
+		4CEBC6E11E5838DE00027343 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBC6E01E5838DE00027343 /* Placeholder.swift */; };
+		4CEBC6E41E5884D300027343 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEBC6E31E5884D300027343 /* Constants.m */; };
 		57A03235F5E9819F81ED3029 /* Pods_Jalapeno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,7 @@
 		4C6F915E1E5808D400989788 /* DeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewCell.h; sourceTree = "<group>"; };
 		4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
 		4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
-		4C6F91641E58246000989788 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		4C6F91651E58246000989788 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4C6F91681E58311200989788 /* Jalapeno-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jalapeno-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C7F338E1E57D888006E81C9 /* Jalapeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jalapeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,8 +43,10 @@
 		4CAFFCCB1E57E09500682871 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4CAFFCCD1E57E1E500682871 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
 		4CAFFCCE1E57E1E500682871 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
-		4CAFFCD01E57E20000682871 /* datadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datadummy.json; sourceTree = "<group>"; };
 		4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = historicaldatadummy.json; sourceTree = "<group>"; };
+		4CEBC6E01E5838DE00027343 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		4CEBC6E21E5884D300027343 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4CEBC6E31E5884D300027343 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		735488383FE51D0E2CBB354D /* Pods_Jalapeno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jalapeno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jalapeno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jalapeno/Pods-Jalapeno.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +106,8 @@
 				4C7F339F1E57D888006E81C9 /* LaunchScreen.storyboard */,
 				4C7F33A21E57D888006E81C9 /* Info.plist */,
 				4C7F33911E57D888006E81C9 /* Supporting Files */,
+				4C6F91681E58311200989788 /* Jalapeno-Bridging-Header.h */,
+				4CEBC6E01E5838DE00027343 /* Placeholder.swift */,
 			);
 			path = Jalapeno;
 			sourceTree = "<group>";
@@ -112,13 +115,12 @@
 		4C7F33911E57D888006E81C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4CAFFCD01E57E20000682871 /* datadummy.json */,
 				4CAFFCD21E57EC7A00682871 /* historicaldatadummy.json */,
 				4C7F33941E57D888006E81C9 /* AppDelegate.h */,
 				4C7F33951E57D888006E81C9 /* AppDelegate.m */,
-				4C6F91641E58246000989788 /* Constants.h */,
-				4C6F91651E58246000989788 /* Constants.m */,
 				4C7F33921E57D888006E81C9 /* main.m */,
+				4CEBC6E21E5884D300027343 /* Constants.h */,
+				4CEBC6E31E5884D300027343 /* Constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -203,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CAFFCD11E57E20000682871 /* datadummy.json in Resources */,
 				4C6F91621E5808D400989788 /* DeviceTableViewCell.xib in Resources */,
 				4C7F33A11E57D888006E81C9 /* LaunchScreen.storyboard in Resources */,
 				4C7F339E1E57D888006E81C9 /* Assets.xcassets in Resources */,
@@ -227,7 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2FA1A829B6F8FC009E96A23D /* [CP] Embed Pods Frameworks */ = {
@@ -270,10 +271,11 @@
 				4CAFFCCC1E57E09500682871 /* LoginViewController.m in Sources */,
 				4CAFFCCF1E57E1E500682871 /* DeviceDetailViewController.m in Sources */,
 				4C7F33961E57D888006E81C9 /* AppDelegate.m in Sources */,
+				4CEBC6E41E5884D300027343 /* Constants.m in Sources */,
 				4C6F91581E57F9D400989788 /* DeviceTableViewController.m in Sources */,
 				4C7F33931E57D888006E81C9 /* main.m in Sources */,
-				4C6F91661E58246000989788 /* Constants.m in Sources */,
 				4C6F91611E5808D400989788 /* DeviceTableViewCell.m in Sources */,
+				4CEBC6E11E5838DE00027343 /* Placeholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +325,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -342,6 +346,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = Jalapeno;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +376,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -383,6 +390,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = Jalapeno;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -393,14 +401,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74E58694FD610F314D8E2135 /* Pods-Jalapeno.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jalapeno/Jalapeno-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -409,14 +422,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20E88D14A442359547BF70A8 /* Pods-Jalapeno.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2GDREL3UW9;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Jalapeno/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Jalapeno.Jalapeno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Jalapeno/Jalapeno-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

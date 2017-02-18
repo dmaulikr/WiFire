@@ -7,4 +7,6 @@ target 'Jalapeno' do
 
   # Pods for Jalapeno
   pod 'AFNetworking'
+  pod 'Charts'
+  pod 'ChameleonFramework'
 end
