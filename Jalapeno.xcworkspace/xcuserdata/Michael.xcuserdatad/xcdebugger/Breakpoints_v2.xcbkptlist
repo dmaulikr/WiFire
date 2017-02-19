@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Jalapeno/DeviceDetailViewController.m"
-            timestampString = "509136357.844054"
+            timestampString = "509147838.298386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>

@@ -66,6 +66,15 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     NSLog(@"Push received = %@", userInfo);
+    NSString *alertMessage = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:alertMessage preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:defaultAction];
+    
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    
 }
 
 
