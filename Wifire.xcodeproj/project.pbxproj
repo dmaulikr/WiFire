@@ -31,7 +31,7 @@
 		4C6F915F1E5808D400989788 /* DeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewCell.m; sourceTree = "<group>"; };
 		4C6F91601E5808D400989788 /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceTableViewCell.xib; sourceTree = "<group>"; };
 		4C6F91681E58311200989788 /* Jalapeno-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jalapeno-Bridging-Header.h"; sourceTree = "<group>"; };
-		4C7F338E1E57D888006E81C9 /* Jalapeno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jalapeno.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7F338E1E57D888006E81C9 /* Wifire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wifire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7F33921E57D888006E81C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7F33941E57D888006E81C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C7F33951E57D888006E81C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		4C7F338F1E57D888006E81C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C7F338E1E57D888006E81C9 /* Jalapeno.app */,
+				4C7F338E1E57D888006E81C9 /* Wifire.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C7F338D1E57D887006E81C9 /* Jalapeno */ = {
+		4C7F338D1E57D887006E81C9 /* Wifire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C7F33A51E57D888006E81C9 /* Build configuration list for PBXNativeTarget "Jalapeno" */;
+			buildConfigurationList = 4C7F33A51E57D888006E81C9 /* Build configuration list for PBXNativeTarget "Wifire" */;
 			buildPhases = (
 				0239D3A8FB437BC6DB52576B /* [CP] Check Pods Manifest.lock */,
 				4C7F338A1E57D887006E81C9 /* Sources */,
@@ -162,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = Jalapeno;
+			name = Wifire;
 			productName = Jalapeno;
-			productReference = 4C7F338E1E57D888006E81C9 /* Jalapeno.app */;
+			productReference = 4C7F338E1E57D888006E81C9 /* Wifire.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C7F33891E57D887006E81C9 /* Build configuration list for PBXProject "Jalapeno" */;
+			buildConfigurationList = 4C7F33891E57D887006E81C9 /* Build configuration list for PBXProject "Wifire" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -205,7 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C7F338D1E57D887006E81C9 /* Jalapeno */,
+				4C7F338D1E57D887006E81C9 /* Wifire */,
 			);
 		};
 /* End PBXProject section */
@@ -453,7 +453,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C7F33891E57D887006E81C9 /* Build configuration list for PBXProject "Jalapeno" */ = {
+		4C7F33891E57D887006E81C9 /* Build configuration list for PBXProject "Wifire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C7F33A31E57D888006E81C9 /* Debug */,
@@ -462,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C7F33A51E57D888006E81C9 /* Build configuration list for PBXNativeTarget "Jalapeno" */ = {
+		4C7F33A51E57D888006E81C9 /* Build configuration list for PBXNativeTarget "Wifire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C7F33A61E57D888006E81C9 /* Debug */,

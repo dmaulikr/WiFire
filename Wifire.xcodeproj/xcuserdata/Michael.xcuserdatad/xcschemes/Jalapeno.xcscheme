@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C7F338D1E57D887006E81C9"
-               BuildableName = "Jalapeno.app"
-               BlueprintName = "Jalapeno"
-               ReferencedContainer = "container:Jalapeno.xcodeproj">
+               BuildableName = "Wifire.app"
+               BlueprintName = "Wifire"
+               ReferencedContainer = "container:Wifire.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C7F338D1E57D887006E81C9"
-            BuildableName = "Jalapeno.app"
-            BlueprintName = "Jalapeno"
-            ReferencedContainer = "container:Jalapeno.xcodeproj">
+            BuildableName = "Wifire.app"
+            BlueprintName = "Wifire"
+            ReferencedContainer = "container:Wifire.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C7F338D1E57D887006E81C9"
-            BuildableName = "Jalapeno.app"
-            BlueprintName = "Jalapeno"
-            ReferencedContainer = "container:Jalapeno.xcodeproj">
+            BuildableName = "Wifire.app"
+            BlueprintName = "Wifire"
+            ReferencedContainer = "container:Wifire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4C7F338D1E57D887006E81C9"
-            BuildableName = "Jalapeno.app"
-            BlueprintName = "Jalapeno"
-            ReferencedContainer = "container:Jalapeno.xcodeproj">
+            BuildableName = "Wifire.app"
+            BlueprintName = "Wifire"
+            ReferencedContainer = "container:Wifire.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

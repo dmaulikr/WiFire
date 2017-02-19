@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *liveTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *liveFlameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *liveGasLabel;
+@property (weak, nonatomic) IBOutlet UILabel *liveNoiseLabel;
 
 @property (strong, nonatomic) IBOutlet PieChartView *chartView;
 @property (strong, nonatomic) IBOutlet LineChartView *tempLiveChart;
@@ -28,6 +29,7 @@
 @property (strong, nonatomic) LineChartDataSet *tempChartDataLive;
 @property (strong, nonatomic) LineChartDataSet *flameChartDataLive;
 @property (strong, nonatomic) LineChartDataSet *gasChartDataLive;
+@property (strong, nonatomic) LineChartDataSet *noiseChartDataLive;
 
 @property (nonatomic) double counter;
 
@@ -37,24 +39,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Hall 17";
     [self setupPieChartView:self.chartView];
     [self setupLineChartView:self.tempLiveChart];
     [self setupLineChartView:self.flameLiveChart];
     [self setupLineChartView:self.gasLiveChart];
+    [self setupLineChartView:self.noiseLiveChart];
+
 
     self.tempChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Temperature"];
-    self.flameChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Temperature"];
-    self.gasChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Temperature"];
+    self.flameChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Flame"];
+    self.gasChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Gas"];
+    self.noiseChartDataLive = [[LineChartDataSet alloc] initWithValues:nil label:@"Noise"];
+
     [self configureSet:self.tempChartDataLive];
     [self configureSet:self.flameChartDataLive];
     [self configureSet:self.gasChartDataLive];
+    [self configureSet:self.noiseChartDataLive];
+
 
     self.counter = 0;
+    [self addHistoricalData];
     [self appendCurrentResponseData:nil];
 
-    [NSTimer scheduledTimerWithTimeInterval:2.0f
+    [NSTimer scheduledTimerWithTimeInterval:5.f
                                      target:self selector:@selector(appendCurrentResponseData:) userInfo:nil repeats:YES];
 
+}
+
+- (void)addHistoricalData{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [manager GET:@"http://130.245.183.173/api/history" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        for (NSDictionary *dict in responseObject){
+            NSInteger tempValue = [[dict objectForKey:@"temp"]integerValue];
+            NSInteger flameValue = [[dict objectForKey:@"flame"]integerValue];
+            NSInteger gasValue = [[dict objectForKey:@"gas"]integerValue];
+            NSInteger noiseValue = [[dict objectForKey:@"sound"]integerValue];
+            
+            ChartDataEntry *newTempEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:tempValue];
+            ChartDataEntry *newFlameEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:flameValue];
+            ChartDataEntry *newGasEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:gasValue];
+            ChartDataEntry *newNoiseEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:noiseValue];
+
+            
+            [self.tempChartDataLive addEntry:newTempEntry];
+            [self.flameChartDataLive addEntry:newFlameEntry];
+            [self.gasChartDataLive addEntry:newGasEntry];
+            [self.noiseChartDataLive addEntry:newNoiseEntry];
+
+            self.counter = self.counter + 1;
+        }
+        
+        
+        [self updateChart];
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)setupLineChartView:(LineChartView *)chart{
@@ -65,12 +107,14 @@
     chart.dragEnabled = YES;
     [chart setScaleEnabled:YES];
     chart.pinchZoomEnabled = NO;
-    chart.xAxis.enabled = NO;
+    chart.xAxis.enabled = YES;
+    chart.xAxis.granularity = 5;
     chart.chartDescription.enabled = NO;
     chart.rightAxis.enabled = NO;
     chart.leftAxis.drawGridLinesEnabled = NO;
     chart.legend.enabled = NO;
     [chart.leftAxis setLabelTextColor:[UIColor whiteColor]];
+    [chart.xAxis setLabelTextColor:[UIColor flatWhiteColorDark]];
 }
 
 - (void)appendCurrentResponseData:(NSTimer *)timer{
@@ -81,30 +125,48 @@
         NSInteger tempValue = [[responseObject objectForKey:@"temp"]integerValue];
         NSInteger flameValue = [[responseObject objectForKey:@"flame"]integerValue];
         NSInteger gasValue = [[responseObject objectForKey:@"gas"]integerValue];
+        NSInteger noiseValue = [[responseObject objectForKey:@"sound"]integerValue];
+
+        NSString *status = [responseObject objectForKey:@"level"];
         
-        ChartDataEntry *newTempEntry = [[ChartDataEntry alloc] initWithX:self.counter * 2 y:tempValue];
-        ChartDataEntry *newFlameEntry = [[ChartDataEntry alloc] initWithX:self.counter * 2 y:flameValue];
-        ChartDataEntry *newGasEntry = [[ChartDataEntry alloc] initWithX:self.counter * 2 y:gasValue];
+        if([status isEqualToString:@"warning"]){
+            [self updatePieChart:@[[UIColor flatYellowColorDark], [UIColor flatMintColor], [UIColor flatMintColor], [UIColor flatMintColor]] isSecure:NO];
+        }
+        else if ([status isEqualToString:@"danger"]){
+            [self updatePieChart:@[[UIColor flatMintColor],[UIColor flatWatermelonColor],[UIColor flatMintColor],[UIColor flatMintColor]] isSecure:NO];
+        } else{
+            [self updatePieChart:@[[UIColor flatMintColor],[UIColor flatMintColor],[UIColor flatMintColor],[UIColor flatMintColor]] isSecure:YES];
+        }
+        
+        ChartDataEntry *newTempEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:tempValue];
+        ChartDataEntry *newFlameEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:flameValue];
+        ChartDataEntry *newGasEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:gasValue];
+        ChartDataEntry *newNoiseEntry = [[ChartDataEntry alloc] initWithX:self.counter * 5 y:noiseValue];
+
         
         [self.tempChartDataLive addEntry:newTempEntry];
         [self.flameChartDataLive addEntry:newFlameEntry];
         [self.gasChartDataLive addEntry:newGasEntry];
+        [self.noiseChartDataLive addEntry:newNoiseEntry];
+
         
         [self updateChart];
-        self.liveTemperatureLabel.text = [NSString stringWithFormat:@"%ld\u00B0C", (long)tempValue];
-        self.liveFlameLabel.text = [NSString stringWithFormat:@"%ld", (long)flameValue];
-        self.liveGasLabel.text = [NSString stringWithFormat:@"%ld", (long)gasValue];
+        self.liveTemperatureLabel.text = [NSString stringWithFormat:@"%ld\u00B0F", (long)tempValue];
+        self.liveFlameLabel.text = [NSString stringWithFormat:@"%ldu", (long)flameValue];
+        self.liveGasLabel.text = [NSString stringWithFormat:@"%ldlv", (long)gasValue];
+        self.liveNoiseLabel.text = [NSString stringWithFormat:@"%lddB", (long)noiseValue];
+
 
         
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
     self.counter = self.counter + 1;
-    if (self.counter > 20){
+    if (self.counter > 15){
         [self.tempChartDataLive removeFirst];
         [self.gasChartDataLive removeFirst];
         [self.flameChartDataLive removeFirst];
-
+        [self.noiseChartDataLive removeFirst];
     }
 }
 
@@ -127,9 +189,13 @@
     LineChartData *tempData = [[LineChartData alloc]initWithDataSet:self.tempChartDataLive];
     LineChartData *flameData = [[LineChartData alloc]initWithDataSet:self.flameChartDataLive];
     LineChartData *gasData = [[LineChartData alloc]initWithDataSet:self.gasChartDataLive];
+    LineChartData *noiseData = [[LineChartData alloc]initWithDataSet:self.noiseChartDataLive];
+
     self.tempLiveChart.data = tempData;
     self.flameLiveChart.data = flameData;
     self.gasLiveChart.data = gasData;
+    self.noiseLiveChart.data = noiseData;
+
 
 }
 
@@ -165,7 +231,7 @@
     
     NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:@"Secure"];
     [centerText setAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:24.f],
+                                NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:20.f],
                                 NSParagraphStyleAttributeName: paragraphStyle,
                                 NSForegroundColorAttributeName : [UIColor whiteColor]
                                 } range:NSMakeRange(0, centerText.length)];
@@ -177,6 +243,7 @@
     chartView.rotationAngle = 0.0;
     chartView.rotationEnabled = YES;
     chartView.highlightPerTapEnabled = YES;
+
     
     chartView.delegate = self;
     [chartView.legend setEnabled:NO];
@@ -186,16 +253,17 @@
     [colors addObject:[UIColor flatMintColor]];
     
     NSMutableArray *values = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 4; i++)
-    {
-        [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"yo"]];
-    }
+    
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Temp"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Flame"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Gas"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Noise"]];
+
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:values label:@"Secure"];
     dataSet.sliceSpace = 2.0;
     dataSet.colors = colors;
-    dataSet.valueLinePart1OffsetPercentage = 0.8;
-    dataSet.valueLinePart1Length = 0.2;
-    dataSet.valueLinePart2Length = 0.4;
+    dataSet.drawValuesEnabled = NO;
+
         //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
     dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
     PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
@@ -205,6 +273,49 @@
     [chartView highlightValues:nil];
     
 }
+
+- (void)updatePieChart:(NSArray *)array isSecure:(BOOL)secure{
+    NSMutableArray *values = [[NSMutableArray alloc] init];
+    
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Temp"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Flame"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Gas"]];
+    [values addObject:[[PieChartDataEntry alloc] initWithValue: 25 label:@"Noise"]];
+    
+    NSString *centerMessage = @"";
+    if(secure){
+        centerMessage = @"Secure";
+    } else{
+        centerMessage = @"Warning";
+    }
+        
+    
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:values label:@"Secure"];
+    dataSet.sliceSpace = 2.0;
+    dataSet.colors = array;
+    dataSet.drawValuesEnabled = NO;
+    
+        //dataSet.xValuePosition = PieChartValuePositionOutsideSlice;
+    dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+    PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
+    NSMutableAttributedString *centerText = [[NSMutableAttributedString alloc] initWithString:centerMessage];
+    [centerText setAttributes:@{
+                                NSFontAttributeName: [UIFont fontWithName:@"Avenir-Medium" size:20.f],
+                                NSParagraphStyleAttributeName: paragraphStyle,
+                                NSForegroundColorAttributeName : [UIColor whiteColor]
+                                } range:NSMakeRange(0, centerText.length)];
+    
+    self.chartView.centerAttributedText = centerText;
+    
+    self.chartView.data = data;
+}
+
+
 
 
 @end

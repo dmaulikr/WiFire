@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
-    self.title = @"Sensor Groups";
+    self.title = @"Sensors";
 
     [self.tableView registerNib:[UINib nibWithNibName:@"DeviceTableViewCell" bundle:nil] forCellReuseIdentifier:@"DeviceTableViewCell"];
     self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
