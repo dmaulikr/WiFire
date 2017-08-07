@@ -1,4 +1,4 @@
-WiFire CEWIT Hackathon 2017 - Threat Detection Application
+## WiFire CEWIT Hackathon 2017 - Threat Detection Application
 
 Winner of the Most Ambitious Project prize.
 
